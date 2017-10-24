@@ -1,7 +1,9 @@
 FROM ruby:latest
 RUN apt-get update && apt-get install -y nodejs && gem install rails && mkdir -p /opt/app
 
-ONBUILD COPY . /opt/app
-ONBUILD WORKDIR /opt/app
-ONBUILD EXPOSE 3000
-ONBUILD RUN bundle install && rake db:migrate && rake db:seed 
+RUN     rails new app
+RUN     cp -r app /opt
+WORKDIR /opt/app
+EXPOSE 3000
+ONBUILD CMD bundle && bin/rails db:migrate
+#  && rake db:seed 
