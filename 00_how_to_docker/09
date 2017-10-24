@@ -1,1 +1,1 @@
-apt update && apt upgrade && apt install git && apt install gcc
+apt update && apt upgrade && apt -y install git gcc
