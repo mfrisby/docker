@@ -1,1 +1,5 @@
-docker run -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 <image id>
+docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 <image id>
+use team speak client 
+in connect add docker-machine ip
+any nickename
+fill server password
