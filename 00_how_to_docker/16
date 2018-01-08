@@ -1,1 +1,1 @@
-/bin/bash: q : commande introuvable
+docker logs -f spawning-pool
